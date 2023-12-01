@@ -22,12 +22,19 @@ export default function App() {
       setTasks([...remainingTasks])
     }
   
-
+    const handleChangeStatus= (id)=>{
+        const modifiedTasks = tasks.map(t => 
+          t.id === id ?
+          {...t,isCompleted: !t.isCompleted}
+          :
+          t)
+          setTasks([...modifiedTasks])
+    }
   return (
     <>
     <h1>Lista de Tareas</h1>
     <Input onAddTask = {(description) => handleAddTask(description)} />
-    <TaskList onDeleteTask ={(id) => handleDelete(id)} tasks = {tasks}/> 
+    <TaskList onDeleteTask ={(id) => handleDelete(id)} tasks = {tasks} onChangeStatus={handleChangeStatus}/> 
     </>
     )
 

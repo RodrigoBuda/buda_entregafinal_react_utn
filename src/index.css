@@ -3,3 +3,25 @@
     margin: 5px;
     
 }
+.cont-taskList{
+    display: flex;
+    justify-content: center;
+}
+.cont-id-tarea{
+  margin: 7px;  
+
+}
+li{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.hecho-pendiente{
+    display: flex;
+    margin: 7px;
+    width: 120px;
+    
+}
+.btns-hecho-pend{
+    display: flex;
+}
